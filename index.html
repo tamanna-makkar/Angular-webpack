@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        
+        <script src="js/vendor.bundle.js"></script>
+        <script src="js/app.bundle.js"></script>
+        
+    </head>
+    <body ng-app="dashboard">
+        <div class="container">
+        <br />
+        <div ng-controller="dashboardController">
+		   <!-- Controller -->
+		   <div ng-class="(controllerValue?'alert alert-success':'alert alert-danger')">
+		      {{controllerValue}}
+		   </div>
+		   <!-- Services -->
+		   <div ng-class="(person?'alert alert-success':'alert alert-danger')">
+		       <ul>
+			     <li ng-repeat="serviceData in person">
+				    {{serviceData.name}}
+				    {{serviceData.type}}
+				 </li>
+			   </ul>
+		   </div>
+		   <!-- Directives -->
+			<div class="alert alert-danger" ng-class="{'alert-danger': !value, 'alert-success': value}"><simple-directive></simple-directive></div>
+        
+		</div>
+        </div>
+    </body>
+</html>

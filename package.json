@@ -1,0 +1,20 @@
+{
+  "name": "angularjs",
+  "version": "1.0.0",
+  "description": "This is angular Setup",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "webpack"
+  },
+  "keywords": [
+    "Angular",
+    "webpack"
+  ],
+  "author": "Anonymous",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.8",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
