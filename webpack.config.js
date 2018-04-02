@@ -9,7 +9,14 @@ module.exports = {
 		path: __dirname + '/js',
 		filename: 'app.bundle.js'
 	},
+	devServer:{
+		inline:true,
+		port:3000,	
+	},	
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({name:'vendor',filename:'vendor.bundle.js'})
-    ]	
+    ],
+	
+  
+		
 };

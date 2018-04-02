@@ -6,9 +6,15 @@ function DashboardService() {
 		   {name:'Services 1',type:'object'},
 		   {name:'Services 2',type:'object'}
 		]
-		return {
-			personData : _person 
+		function sayHello(text){
+			return "Service Says -- hello" + " " + text + "!";
 		}
+		return {
+			personData : _person, 
+			sayHello: sayHello
+		}
+		
+		
 	
 }
 module.exports = DashboardService;
